@@ -163,6 +163,7 @@ footer p {
   .logo{
     text-align: left;
     font-size: 5vw;
+    max-width: fit-content;
   }
 
   .joinPic{
