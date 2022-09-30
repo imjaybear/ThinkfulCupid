@@ -73,6 +73,7 @@ header {
   background-color: #83092e;
   padding: 20px 20px 0 20px;
   text-align: center;
+  width: 100%;
 }
 
 .logo {
@@ -219,6 +220,7 @@ footer p {
   header{
     display: flex;
     flex-direction: row;
+    width: 100%;
   }
 
   header div{
