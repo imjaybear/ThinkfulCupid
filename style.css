@@ -6,19 +6,22 @@ body {
 }
 
 h2 {
-  font-size: 26px;
+  /* font-size: 26px; */
+  font-size: 150%;
   font-weight: 400;
-  margin: 0 10px 15px 10px;
+  /* margin: 0 10px 15px 10px; */
+  margin: 0% 2% 4% 2%;
   text-align: center;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 120%;
   font-weight: 500;
 }
 
-img {
-  max-width:100%;
+h4 {
+  text-align: center;
+  font-size: 150%;
 }
 
 p {
@@ -27,7 +30,7 @@ p {
 }
 
 section {
-  padding: 20px;
+  padding: 1%;
 }
 
 section.alternate-background {
@@ -35,56 +38,63 @@ section.alternate-background {
   color: #ecdbc9;
 }
 
+main img {
+  max-width: 100%;
+}
 
 /* ---  Groups & Items --- */
-
-.aboutText{
-  font-size: 3vw;
-}
 
 .group {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .item {
-  width: 400px;
-  display: flex;
-  flex-direction: column;
   flex: 1;
-  margin: 10px;
-  align-items: center;
-}
-
-.item img{
-  max-width: 90%;
-  max-height: 90%;
-  display: block;
+  margin:2%;
 }
 
 .item-double {
   flex: 2;
 }
 
+img {
+  display: flex;
+  flex-direction: column;
+}
+
+.group img {
+  width: 100%;
+}
+
 /* -------  Navigation ------- */
 
 header {
   background-color: #83092e;
-  padding: 20px 20px 0 20px;
-  text-align: center;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#menu {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .logo {
   font-family: "Tangerine", cursive;
-  font-size: 72px;
+  font-size: 400%;
   color: #ecdbc9;
-}
-
-header nav ul {
-  display: flex;
-  justify-content: center;
 }
 
 header nav ul li {
@@ -103,41 +113,44 @@ header nav ul li a:hover {
 }
 
 /* -------  Join Form ------- */
-form {
+.join-input {
   display: flex;
-  justify-content: flex-end;
-  border: 2px solid #6b1a22;
-  padding: 10px;
-  /* width: 400px; */
-
+  flex-direction: column;
+  justify-content: center;
+  padding: 1%;
 }
 
-form label {
-  margin: 20px;
-  flex: 1;
-  font-weight: bold;
+.down-img {
+  flex: 50%;
 }
 
-form select,
-form input {
-  flex: 2;
-  margin-bottom: 20px;
-  width: 180px;
+.field-wrapper {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-form label, input {
-  display: inline-block;
-  vertical-align: baseline;
-  width: 100px;
+
+.input-join-data {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
 }
 
-form button {
-  background-color: #83092e;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  padding: 15px;
+
+button {
   width: 100%;
+  height: 50px;
+  font-size: 20px;
+  color:#fff;
+  background:#6b1a22;
+  border: none;
+}
+
+/* -------  About ------- */
+#about .about-imgs {
+  padding: 2%;
 }
 
 /* -------  Footer ------- */
@@ -149,92 +162,132 @@ footer {
 footer p {
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 5%;
 }
 
+
+
+
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
 
-@media screen and (min-width: 480px) {
   .group {
+    flex-direction: row;
+  }
+
+   /* -------  Join Form ------- */
+
+  #join .group {
+    width: fit-content;
+    display: flex;
+  }
+
+  #join  .down-img {
+    width: 50%;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .down-img img {
+    align-self: center;
+  }
+
+  .join-input {
+    width: 50%;
+    font-size: 80%;
+  }
+  
+  /* -------  Join Form Square------- */
+
+ .input-join-data {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.join-input {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inside-field-wrapper {
+  width: 65%;
+  align-self: center;
+  margin-bottom: 22%;
+}
+
+
+button {
+  width: 100%;
+  height: 150%;
+  font-size: 20px;
+  color:#fff;
+  background:#6b1a22;
+  border: none;
+} */
+
+
+ /* -------  About ------- */
+
+#about .title {
+  height: 15px;
+  width: 100%
+}
+
+#about .group {
+  flex-direction: column;
+}
+
+.about-content {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+#about .about-imgs {
+  width: 25%;
+}
+
+.about-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1%;
+}
+  
+  /* -------  Download ------- */
+  #download {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;  
   }
 
-  .logo{
-    text-align: left;
-    font-size: 5vw;
-    max-width: fit-content;
-  }
-
-  .joinPic{
-    width: 75%;
-  }
-  .joinForm{
-    width: 25%;
-  }
-
-  .aboutImgs{
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-  }
-
-  .aboutText{
-    display: flex;
-    font-size: 1.5vw;
-    width: 50%;
-  }
-
-  #blog img{
-    max-width: 100%;
-  }
-
-  .downloadText{
+  .down-txt-container {
+    flex: 50%;
     display: flex;
     flex-direction: column;
-    width: 50%
+    justify-content: center;
+    padding: 1%;
   }
 
-  .blogPic{
-    display: flex;
+  #download img {
+    width: 50%;
+  }
+
+
+
+  /* -------  Blog ------- */
+  #blog .group {
     flex-direction: column;
-    width: 50%;
-    padding: 10px;
   }
 
-  .blogRow{
+  #blog .blog-wrap{
     display: flex;
-    flex-direction: row;
   }
-
-  .alignIt{
-    height: 200px;
-  }
-
-  header nav ul{
-    justify-content: right;
-    font-size: 2vw;
-  }
-
-  header{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  }
-
-  header div{
-    width: 50%;
-  }
-
-  header nav{
-    justify-content: right;
-    width: 50%;
-  }
-
-
-  h2{
-    text-align: center;
-  }
-
+ 
 }
